@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting To KoKo</title>
+</head>
+<body>
+   <div class="greeting-box" style="margin-top: 50px;
+   padding: 20px; border: 2px dashed #a29bfe;">
+   <h3>Say Hello To Koko</h3>
+
+   <input type="text" id="userName" placeholder="Write Your Name">
+    <button id="greetBtn">Greet Me!</button>
+
+    <p id="greetMessage" style="font-size: 1.5em; color: tomato;
+    font-weight: bold;"></p>
+
+</div>
+
+<script>
+
+    document.querySelector("#greetBtn").onclick = function() {
+        let name = document.querySelector("#userName").value;
+
+        if(name.trim() === "") {
+            document.querySelector("#greetMessage").textContent = "Please Fill Your Name First";
+        } else {
+            document.querySelector("#greetMessage").textContent = "Mingalar Par ${name}. Nice To Meet You";
+
+            document.querySelector("#userName").value = "";
+        }
+
+
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
